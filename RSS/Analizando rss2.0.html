@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!--------------------------- METADATOS --------------------------->
+        <meta charset="utf-8">
+        <meta name="author" content="Andrés Heras Leiva">
+        <meta name="description" content="Video">
+        <meta name="keywords" content="RSS,ejercicios,LMGSI,ASIR"/>
+        <meta name="viewport" content="width=device-width, user-scalable=1">
+        <!--https://developer.mozilla.org/es/docs/M%C3%B3vil/Viewport_meta_tag-->
+        <!---------------------------- Título ----------------------------->
+        <title>Andrés Heras Leiva 1ºASIR</title>
+        <!------------ RECURSOS ENLAZADOS (CSS,RSS,JAVASCRIPT)-------------->
+        <!--------------------------- FAVICON ----------------------------->
+        <link rel="shortcut icon" href="../imágenes/favicon.png" type="image/.png"/>
+        <!-------------------------- CSS EXTERNO ------------------------>
+        <link rel="stylesheet" type="text/css" href="../css/estilo.css">
+    </head>
+    <body>
+        <header>
+            <h1>Analizando formatos RSS y Atom</h1>
+            <h2>
+                <a class="wlink" href="#feed01">Feed 01</a>
+                <a class="wlink" href="#feed02">Feed 02</a>
+                <a class="wlink" href="#feed03">Feed 03</a>
+                <a class="wlink" href="#feed04">Feed 04</a>
+            </h2>
+        </header>
+        <!------------------- BARRA DE NAVEGACIÓN --------------------->
+        <nav><ul class="navbar">
+                <li>
+                    <a href="../XHTML/xhtml00.html">Libro Introducción al XHTML</a>
+                <li>
+                    <a href="../Formularios/Findex.html">Formularios</a>
+                <li>
+                    <a href="../Tablas/tablas.html">Tablas</a>
+                <li>
+                    <a href="../ListadoV/">Listado Variado</a>
+                <li>
+                    <a href="../ejercicios CSS/00_CSS.html">Prácticas CSS</a>
+                <li>
+                    <a href="RSSindex.html">Sindicación de Contenidos</a>
+                </li>
+                <li>
+                    <a href="../pictures/enconstrucción.png">Exámenes</a>
+                </li>
+            </ul>
+        </nav>
+        <br>
+        <hr> 
+        <!------------------------------ ARTICLE feed01 ---------------------------->
+        <article>
+            <h2 id="feed01">Primer feed</h2>
+            <li>
+                <a
+                    href="http://static.userland.com/gems/backend/rssTwoExample2.xml"
+                    target="_blank">http://static.userland.com/gems/backend/rssTwoExample2.xml</a>
+            </li>
+            <img src="feed01.png" alt="feed01">
+
+            <p class="ejercicio">
+                <strong>1.-Indica si es válido el feed</strong>
+            </p>
+            <p>Este feed es VÁLIDO</p>
+            <p class="ejercicio">
+                <span id="error01">
+                    <strong>2.-Subsana los errores/warnings en su caso</strong>
+                </span>
+                <p>El error
+                    <strong>"Email address is missing real name"</strong>, que aparecen en las
+                    <span class="línea">líneas 17 y 18</span>, es debido a que la dirección de email no es real.
+                    <strong>Solución</strong>: Agregar una dirección real.</p>
+                <p>El error de la
+                    <span class="línea">línea 82,</span>
+                    <strong>"Missing atom:link with rel="self""</strong>, es debido a que no está declarada la url de Atom.
+                    <strong>Solución</strong>: Declarar el espacio Atom, encima del feed:
+                </p>
+                <code>&ltrss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">&lt/rss&gt;</code>
+            </p>
+            e insertamos en la sección channel de nuestro feed el enlace Atom:
+            <p>
+                <code>&lt/atom:link>href="http://misitio.io/rss.xml" rel="self"
+                    type="application/rss+xml" /></code>
+            </p>
+            <p class="ejercicio">
+                <strong>3.-Indica channel o equivalente</strong>
+            </p>
+            <p>El channel va desde la
+                <span class="línea">línea 4
+                </span>hasta la
+                <span class="línea">línea 50.</span>
+            </p>
+            <p class="ejercicio">
+                <strong>4.-Indica número de items o equivalentes</strong>
+            </p>
+            <p>Tiene 9 items declarados</p>
+        </article>
+        <br>
+        <hr> 
+        <!------------------------------ ARTICLE feed 02---------------------------->
+        <article>
+            <h2 id="feed02">Segundo feed</h2>
+            <li>
+                <a href="https://www.feedforall.com/sample-feed.xml" target="_blank">https://www.feedforall.com/sample-feed.xml</a>
+            </li>
+            <img src="feed02.png" alt="feed02">
+            <p class="ejercicio">
+                <strong>1.-Indica si es válido el feed</strong>
+            </p>
+            <p>El feed es
+                <strong>VÁLIDO</strong>
+            </p>
+            <p class="ejercicio">
+                <span id="error02">
+                    <strong>2.-Subsana los errores/warnings en su caso</strong>
+                </p>
+            </span>
+            <p>Nuevamente, aparece el error<strong>"Email address is missing real name"</strong>en las
+                <span class="línea">líneas 12 y 14</span>
+                y habrá que resolverlo como en el caso
+                <a href="#error01">anterior</a>.
+            </p>
+            <p>En la
+                <span class="línea">línea 18
+                </span>aparece el error<strong>Image title doesn't match channel title"</strong>porque no coincide el título de la imagen con el título del canal</p>
+            <p>En la
+                <span class="línea">línea 19</span>
+                aparece el error<strong>"Image link doesn't match channel title"</strong>
+                porque el enlace de la imagen no coincide con el enlace del canal</p>
+            <p>En la
+                <span class="línea">línea 32</span>, aparece el error<strong>"Image item doesn't match channel title"</strong>
+                porque no contiene el elemento guid.</span>
+            <p>En la
+                <span class="línea">línea 51</span>
+                nos encontramos el error
+                <strong>"Missing atom:link with rel="self""</strong>, como vimos en el caso
+                <a href="#error01">anterior</a>.</p>
+            <p class="ejercicio">
+                <strong>3.-Indica channel o equivalente</strong>
+            </p>
+            <p>El channel va desde la
+                <span class="línea">línea 3
+                </span>
+                hasta la
+                <span class="línea">línea 51
+                </span>.</p>
+
+            <p class="ejercicio">
+                <strong>4.-Indica número de items o equivalentes</strong>
+            </p>
+            <p>Tiene 3 items declarados</p>
+        </article>
+        <hr> 
+       <!------------------------------ ARTICLE feed 03---------------------------->
+        <br>
+        <article>
+            <h2 id="feed03">Tercer feed</h2>
+            <li>
+                <a href="http://api2.rtve.es/rss/temas_rock-pop.xml" target="_blank">http://api2.rtve.es/rss/temas_rock-pop.xml</a>
+            </li>
+            <img src="feed03.png" alt="feed03">
+            <p class="ejercicio">
+                <strong>1.-Indica si es válido el feed</strong>
+            </p>
+            <p>El feed es
+                <strong>VÁLIDO</strong>
+            </p>
+            <p class="ejercicio">
+                <strong>2.-Subsana los errores/warnings en su caso</strong>
+            </p>
+            <p>Otra vez, se presenta el error<strong>"item should contain a guid element"</strong>en la
+                <span class="línea">línea 12
+                </span>
+                y habrá que resolverlo como en el caso
+                <a href="#error02">anterior</a>, insertando el elemento guid dentro del elemento item.
+            </p>
+            <p>En la
+                <span class="línea">línea 23</span>
+                encontramos el error<strong>"style attribute contains potentially dangerous
+                    content: FONT-SIZE: 10pt; FONT-FAMILY: "Arial","sans-serif"</strong>porquelosatributosdelosestilossonproblemáticosya que pueden contenerelementospeligrososcomotroyanos.<strong>Solución:
+                </strong>Modificar los atributos o elimarlos.</p>
+            <p>En la
+                <span class="línea">línea 421</span>, nuevamente, aparece el error<strong>"Missing atom:link with rel="self"</strong>
+                que vimos como resolverlo en el
+                <a href="#error01">primer feed</a>.</p>
+            <p class="ejercicio">
+                <strong>3.-Indica channel o equivalente</strong>
+            </p>
+            <p>El channel va desde la
+                <span class="línea">línea 3</span>
+                hasta la<span class="línea">
+                    línea 421</span>.
+            </p>
+            <p class="ejercicio">
+                <strong>4.-Indica número de items o equivalentes</strong>
+            </p>
+            <p>Tiene 69 items declarados</p>
+        </article>
+        <br>
+        <!------------------------------ ARTICLE feed04 ---------------------------->
+        <article>
+            <h2 id="feed04">Cuarto feed</h2>
+            <li>
+                <a
+                    href="http://www.aemet.es/documentos_d/eltiempo/prediccion/avisos/rss/CAP_AFAP7431_ATOM.xml"
+                    target="_blank">http://www.aemet.es/documentos_d/eltiempo/prediccion/avisos/rss/CAP_AFAP7431_ATOM.xml</a>
+            </li>
+            <img src="feed04.png" alt="feed04">
+
+            <p class="ejercicio">
+                <strong>1.-Indica si es válido el feed</strong>
+            </p>
+            <p>El feed
+                <strong>NO</strong>
+                es válido</p>
+            <p class="ejercicio">
+                <strong>2.-Subsana los errores/warnings en su caso</strong>
+            </p>
+            <p>En la
+                <span class="línea">línea 2</span>, aparece el error<strong>"Missing atom:link with rel="self"</strong>
+                que vimos como resolverlo en los apartados
+                <a href="#error01">anteriores</a>.</p>
+            <p>En la
+                <span class="línea">línea 6</span>, aparecen dos errores:
+                <ol>
+                    <li>
+                        <strong>"link must have an href attribute"</strong>, porque el enlace debe tener un atributo href.
+                        <strong>
+                            Solución:
+                        </strong>Agregar un atributo href que proporcione la dirección. de la página web
+                        o recurso al que se está vinculando.</p>
+                </li>
+                <li>
+                    <strong>"link should not have text (all data is in attributes)</strong>, porque
+                    los link no deben tener texto ya que algunos elementos exresan sus datos en
+                    texto y otros en datos lo que puede crear confusión.
+                    <strong>
+                        Solución:
+                    </strong>Añadir rel:self .
+                </p>
+            </li>
+        </ol>
+        <p>En la
+            <span class="línea">línea 17</span>, encontramos el error:
+            <p>
+                <strong>"id must be a full and valid URL: Z_CAP_C_LEMM_20190327225002_AFAP7431.tar.gz"</strong>
+            </p>porque la URL está mal escrita.
+            <strong>Solución:</strong>
+            Escribir la correcta
+            (http://www.aemet.es/documentos_d/eltiempo/prediccion/avisos/cap/Z_CAP_C_LEMM_20190327225002_AFAP7431.tar.gz)
+            elementos peligrosos como troyanos.
+        </strong>
+    </p>
+    <p class="ejercicio">
+        <strong>3.-Indica channel o equivalente</strong>
+    </p>
+    <p>El channel va desde la
+        <span class="línea">línea 2
+        </span>
+        hasta la
+        <span class="línea">línea 20
+        </span>
+    </p>
+    <p class="ejercicio">
+        <strong>4.-Indica número de items o equivalentes</strong>
+    </p>
+    <p>Tiene 69 items declarados</p>
+</article>
+<br>
+<hr>
+<!------------------------------ ARTICLE Estructura RSS
+2.00---------------------------->
+<article>
+    <h2 class="ejercicio">Estructura y elementos de RSS 2.0:</h2>
+    <h3>1. Estructura principal de un documento RSS</h3>
+    <code>
+        <p>&lt?xml version="1.0" encoding="ISO-8859-1" ?&gt
+        </p>
+        <p>&ltrss version="2.0"&gt</p>
+        <p>&ltchannel&gt</p>
+        <p>&lttitle&gt&lt!--nombre de nuestro feed--&gt</p>
+        <p>&ltlink&gt&lt!---la URL de nuestro sitio Web --&gt</p>
+        <p>&ltdescription&gt&lt!-- tipo de contenidos que vamos a incluir en el canal.--&gt</p>
+        <p>&ltitem&gt
+        </p>
+        <p>&lttitle&gtTítulo del artículo&lt/title&gt</p>
+        <p>&ltlink&gtDirección Web a la que podemos ir para ampliar esta
+            información&lt/link&gt</p>
+        <p>&ltdescription&gtContenido de esta información&lt/description&gt
+        </p>
+        <p>&lt/item&gt</p>
+        <p>&lt/channel&gt</p>
+        <p>&lt/rss&gt
+        </p>
+    </code>
+    <h3>2.Indica cuántos
+        <u>elementos channel</u>
+        puede haber en un documento RSS</h3>
+    <p>
+        <u>Sólo puede haber un channel</u>
+        en un documento RSS.</p>
+    <h3>3.Indica los
+        <u>elementos requeridos</u>
+        en
+        <em>channel</em>
+        (son tres)</h3>
+    <p>Los elementos del channel requeridos son el
+        <span class="línea">title, link y description</em>
+    </p>
+    <h3>4.Indica los<u>elementos secundarios</u>
+        en
+        <em>channel</em>(son 15)</h3>
+    <p>Los elementos secundarios son
+        <span class="línea">language, copyright, managingEditor, webMaster, pubDate,
+            lastBuildDate, category, generator, docs, cloud, ttl, image, textInput,
+            skipHours, skipDays</span></p>
+    <h3>5.Elementos item</h3>
+    <p>Los elementos de item son title, link, description, author, category,
+        comments, enclosure, guid, pubDate, source</p>
+    <h3>6. Indica el elemento que añade un elemento multimedia. Indica sus tres
+        atributos</h3>
+    <p>enclosure: url,lenght,type</p>
+</article>
+<!------------------------------ ARTICLE Estructura y elementos de Atom
+1.0--------------------------->
+<br>
+<article>
+    <h2 class="ejercicio">Estructura y elementos de Atom 1.0:</h2>
+    <h3>1.Estructura principal de un documento Atom</h3>
+    <code>
+        <p>&lt?xml version="1.0" encoding="utf-8"?&gt
+        </p>
+        <p>
+            &ltfeed xmlns="http://www.w3.org/2005/Atom"&gt
+        </p>
+
+        <p>
+            &lttitle&gtExample Feed&lt/title&gt
+        </p>
+
+        <p>
+            &ltlink href="http://example.org/"/&gt
+        </p>
+
+        <p>
+            &ltupdated&gt2003-12-13T18:30:02Z&lt/updated&gt
+        </p>
+
+        <p>
+            &ltauthor&gt
+        </p>
+
+        <p>
+            &ltname&gtJohn Doe&lt/name&gt
+        </p>
+
+        <p>
+            &lt/author&gt
+        </p>
+
+        <p>
+            &ltentry&gt
+        </p>
+        <p>
+            &lttitle&gtAtom-Powered Robots Run Amok&lt/title&gt
+        </p>
+
+        <p>
+            &ltlink href="http://example.org/2003/12/13/atom03"/&gt
+        </p>
+
+        <p>
+            &ltid&gturn:uuid:1225c695-cfb8-4ebb-aaaa-80da344efa6a&lt/id&gt
+        </p>
+
+        <p>
+            &ltupdated&gt2003-12-13T18:30:02Z&lt/updated&gt
+        </p>
+
+        <p>
+            &ltsummary&gtSome text.&lt/summary&gt
+        </p>
+
+        <p>
+            &lt/entry&gt
+        </p>
+        <p>
+            &lt/feed&gt
+        </p>
+    </code>
+    <blockquote>Plantilla obtenida de
+            <a href="https://tools.ietf.org/html/rfc4287">Request for Comments: 4287 (rfc4287)</a></blockquote>Plantilla obtenida de
+    <h3>2.Indica cuántos
+        <span class="línea">elementos feed</span>
+        pueden haber en un documento Atom</h3>
+    <p>Puede haber
+        <span class="línea">sólo un elemento feed
+        </span>en el documento atom</p>
+    <h3>3.Indica los elementos requeridos en el feed</h3>
+</strong>
+<p>Los elementos obligatorios son el
+    <span class="línea">id, title y updated</span></p>
+<h3>4.Indica los
+    <span class="línea">elementos recomendados</span>
+    en
+    <em>feed</em>
+</h3>
+<p>Los elementos recomendados son
+    <span class="línea">author, link</span></p>
+<p>
+    <h3>5.Indica los
+        <span class="línea">elementos opcionales</span>
+        en
+        <em>feed</em>
+    </h3>
+</p>
+<p>Los atributos opcionales son
+    <span class="línea">category, contributor, generator, icon, logo, rights, subtitle</span></p>
+<p>
+    <h3>6.Indica los
+        <span class="línea">elementos requeridos</span>
+        en
+        <em>entry</em>
+    </h3>
+</p>
+<p>Los elementos obligatorios son
+    <span class="línea">id, title y updated</span></p>
+<p>
+    <h3>7.Indica los
+        <span class="línea">elementos recomendados</span>
+        en
+        <em>entry</em>
+    </h3>
+</p>
+<p>Los elementos recomendados son
+    <span class="línea">author, link, content y summary</span></p>
+<p>
+    <h3>8.Indica los
+        <span class="línea">elementos opcionales</span>
+        en
+        <em>entry</em>
+    </h3>
+</p>
+<p>Los atributos opcionales son
+    <span class="línea">category, contributor, rights, source, published</span></p>
+</article>
+<!---------------------------------- PIE --------------------------->
+<hr>
+<footer>
+<a class="wlink" href="#arriba">Arriba&nbsp</a>
+<a class="wlink" href="RSS02.html">Analizando RSS</a>
+</footer>
+</body>
+</html>

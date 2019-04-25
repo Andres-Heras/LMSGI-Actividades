@@ -1,0 +1,40 @@
+
+  /* Paleta de color utilizada es 139087*/
+h1{
+    font-size: 3em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    color:#10316b;
+}
+h2{
+    font-size: 1.5em;
+    font-family:'Times New Roman', Times, serif;
+    justify-items: center;
+    text-align: center;
+    text-decoration-line: underline;
+    
+}
+
+section{
+    display:flex;
+    justify-content: space-around;
+    align-content: space-around;
+    /*todos los elementos del contenedor tengan la misma separación*/
+    flex-wrap: wrap; /*MODO TARJETA*/
+    background-color:#0b8457;
+    font-family: sans-serif;
+}
+
+article{
+    padding: 5px;
+    margin: 5px;
+    background-color:#eac100;
+    width: 30%;
+    margin-block-start: 10%;
+    margin-block-end: 10%;
+    border-radius: 20px;
+}
+a{
+    color: red;
+    font-family: sans-serif; 
+}

@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!--------------------------- METADATOS --------------------------->
+        <meta charset="utf-8">
+        <meta name="author" content="Andrés Heras Leiva">
+        <meta name="description" content="Video">
+        <meta name="keywords" content="xhtml,css,html5,ejercicios,LMGSI,ASIR"/>
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <!--https://developer.mozilla.org/es/docs/M%C3%B3vil/Viewport_meta_tag-->
+        <!---------------------------- Título ----------------------------->
+        <title>Andrés Heras Leiva 1ºASIR</title>
+        <!------------ RECURSOS ENLAZADOS (CSS,RSS,JAVASCRIPT)-------------->
+        <!--------------------------- FAVICON ----------------------------->
+        <link rel="shortcut icon" href="../imágenes/favicon.png" type="image/.png"/>
+        <!-------------------------- CSS EXTERNO ------------------------>
+        <link rel="stylesheet" type="text/css" href="../css/estilo.css">
+    </head>
+    <!------------------- BARRA DE NAVEGACIÓN --------------------->
+    
+    <!------------------------------- CUERPO ---------------------------->
+        <!--------------------------- LAYOUT ---------------------------->
+        <!--------------------------- CABECERA -------------------------->
+        <header>
+            <h1>FLEXBOX FROGGY</h1>
+        </header>
+        <nav><ul class="navbar">
+            <li>
+                <a href="../XHTML/xhtml00.html">Libro Introducción al XHTML</a>
+            <li>
+                <a href="../Formularios/Findex.html">Formularios</a>
+            <li>
+                <a href="../Tablas/tablas.html">Tablas</a>
+            <li>
+                <a href="../ListadoLV/00_LVindex.html">Listado Variado</a>
+            <li>
+                <a href="00_CSS.html">Prácticas CSS</a>
+            <li>
+                <a href="../RSS/RSSindex.html">Sindicación de Contenidos</a>
+            </li>
+            <li>
+                <a href="../pictures/enconstrucción.png">Exámenes</a>
+            </li>
+        </ul>
+    </nav>
+        <!------------------------------ ARTÍCULO -------------------->
+        <body>
+            <article>
+                <table class="blueTable">
+                    <thead>
+                        <tr>
+                            <th>Propiedades y sus valores</th>
+                            <th>Nº</th>
+                            <th>Ejemplo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="4">
+                                <p>JUSTIFY-CONTENT (Propiedad de alineación):</p>
+                                <p>Define cómo los elementos flexibles se disponen a lo largo del eje principal
+                                    en la línea en curso. Puede tomar los siguientes valores:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <u>flex-start:</u>
+                                        Alinea elementos al lado izquierdo del contenedor.</li>
+                                    <li>
+                                        <u>flex-end:</u>
+                                        Alinea elementos al lado derecho del contenedor.</li>
+                                    <li>
+                                        <u>center:</u>
+                                        Alinea elementos en el centro del contenedor.</li>
+                                    <li>
+                                        <u>space-between:</u>
+                                        Muestra elementos con la misma distancia entre ellos.</li>
+                                    <li>
+                                        <u>space-around:</u>
+                                        Muestra elementos con la misma separación alrededor de ellos.</li>
+                                </ul>
+                            </td>
+                            <td>01</td>
+                            <td>
+                                <p>#pond {</p>
+                                <p>display: flex;</p>
+                                <p>
+                                    <strong>justify-content:
+                                        <u>flex-end</u>
+                                    </p>
+                                </strong>
+                                <p>}</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>02</td>
+                            <td>
+                                <p>#pond {</p>
+                                <p>display: flex;</p>
+                                <p>
+                                    <strong>justify-content:
+                                        <u>center</u>
+                                    </p>
+                                </strong>
+                                <p>}</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>03</td>
+                            <td>
+                                <p>#pond {</p>
+                                <p>display: flex;</p>
+                                <p>
+                                    <strong>justify-content:
+                                        <u>space-around</u>
+                                    </p>
+                                </strong>
+                                <p>}</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>04</td>
+                            <td>
+                                <p>#pond {</p>
+                                <p>display: flex;</p>
+                                <p>
+                                    <strong>justify-content:
+                                        <u>space-between</u>
+                                    </p>
+                                </strong>
+                                <p>}</p>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Align-items (Propiedad de alineación)</p>
+                                <p>define cómo los elementos flexibles se disponen a lo largo del eje secundario
+                                    de la línea en curso.</p>
+                                <ul>
+                                    <li>
+                                        <u>flex-start:</u>
+                                        Alinea elementos a la parte superior del contenedo</li>
+                                    <u>
+                                        flex-end:</u>
+                                    Alinea elementos a la parte inferior del contenedor.</li>
+                                <li>
+                                    <u>center:</u>
+                                    Alinea elementos en el centro (verticalmente hablando) del contenedor.
+                                </li>
+                                <li>
+                                    <u>baseline:</u>
+                                    Muestra elementos en la línea base del contenedor
+                                </li>
+                                <li>
+                                    <u>stretch:</u>
+                                    Elementos se estiran para ajustarse al contenedor.
+                                </li>
+                            </ul>
+                        </td>
+                        <td>5</td>
+                        <td>
+                            <p>#pond {</p>
+                            <p>display: flex;</p>
+                            <p>
+                                <strong>align-items:
+                                    <u>flex-end</u>
+                                </p>
+                            </strong>
+                            <p>}</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">justify-content + align-items</td>
+                        <td>06</td>
+                        <td>
+                            <p>#pond {</p>
+                            <p>display: flex;</p>
+                            <p>
+                                <strong>justify-content</strong>:center;</p>
+                            <p>
+                                <strong>align-items</strong>:center;</p>
+                            <p>}</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>07</td>
+                        <td>
+                            <p>#pond {</p>
+                            <p>display: flex;</p>
+                            <p>
+                                <strong>justify-content</strong>:space around;</p>
+                            <p>
+                                <strong>align-items</strong>:flex-end;</p>
+                            <p>}</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">
+                            <p>flex direction (Propiedad de alineación)</p>
+                            <p>establece el eje principal en la que se colocan los elementos flexibles en
+                                los contenedores.</p>
+                            <ul>
+                                <li>
+                                    <u>row</u>
+                                    Elementos son colocados en la misma dirección del texto.</li>
+                                <u>row-reverse:</u>
+                                Elementos son colocados en la dirección opuesta al texto.</li>
+                            <li>
+                                <u>column:</u>
+                                Elementos se colocan de arriba hacia abajo en la misma dirección del texto.
+                            </li>
+                            <li>
+                                <u>row-reverse:</u>
+                                Elementos son colocados en la dirección opuesta al texto.
+                            </li>
+                            <li>
+                                <u>column-reverse:</u>
+                                Elementos se colocan de abajo hacia arriba.
+                            </li>
+                        </ul>
+                    </td>
+                    <td>08</td>
+                    <td>
+                        <p>#pond {</p>
+                        <p>display: flex;</p>
+                        <p>
+                            <strong>flex-direction</strong>:row-reverse;</p>
+                        <p>
+                            <p>}</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>09</td>
+                        <td>
+                            <p>#pond {</p>
+                            <p>display: flex;</p>
+                            <p>
+                                <strong>flex-direction</strong>:column;</p>
+                            <p>
+                                <p>}</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td rowspan="4">flex direction + justify-content</td>
+                            <td>10</td>
+                            <td>
+                                <p>#pond {</p>
+                                <p>display: flex;</p>
+                                <p>
+                                    <strong>flex-direction</strong>:row-reverse;</p>
+                                <strong>justify-content</strong>:flex-end;</p>
+                            <p>
+                                <p>}</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>
+                                <p>#pond {</p>
+                                <p>display: flex;</p>
+                                <p>
+                                    <strong>flex-direction</strong>:column;</p>
+                                <strong>justify-content</strong>:flex-end;</p>
+                            <p>
+                                <p>}</p>
+                            </td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>
+                            <p>#pond {</p>
+                            <p>display: flex;</p>
+                            <p>
+                                <strong>flex-direction</strong>:column-revers;</p>
+                            <strong>justify-content</strong>:space-between;</p>
+                        <p>
+                            <p>}</p>
+                        </td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>
+                        <p>#pond {</p>
+                        <p>display: flex;</p>
+                        <p>
+                            <strong>flex-direction</strong>:column-revers;</p>
+                        <strong>justify-content</strong>:center;</p>
+                    <p>
+                        <p>}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="2">
+                        <p>ORDER</p>
+                        <p>Esta propiedad permite cambiar el orden de los elementos flexibles en el
+                            codigo fuente de la página web. Se le pueden dan valores enteros positivos o
+                            negativos. El valor predeterminado es 0.</p>
+                    </td>
+                    <td>14</td>
+                    <td>
+                        <p>#pond {</p>
+                        <p>display: flex;</p>
+                        <p>}</p>
+                        <p>
+                            <u>.yellow</u>{</p>
+                        <p>
+                            <strong>order:-1;</strong>
+                        </p>
+                        <p>}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>
+                        <p>#pond {</p>
+                        <p>display: flex;</p>
+                        <p>}</p>
+                        <p>
+                            <u>.red</u>{</p>
+                        <p>
+                            <strong>order:-1;</strong>
+                        </p>
+                        <p>}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="2">
+                        <p>align-self (Propiedad de alineación):</p>
+                        <p>Esta propiedad acepta los mismos valores de align-items
+                            (flex-start,flex-end,center,baseline y strech) pero son usados para un elemento
+                            específico.</p>
+                    </td>
+                    <td>16</td>
+                    <td>
+                        <p>#pond {</p>
+                        <p>display: flex;</p>
+                        <p>align-items:flex-star;</p>
+                        <p>}</p>
+                        <p>
+                            <u>.yellow</u>{</p>
+                        <p>align-self: flex-end</p>
+                        <p>}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>
+                        <p>#pond {</p>
+                        <p>display: flex;</p>
+                        <p>align-items:flex-star;</p>
+                        <p>}</p>
+                        <p>
+                            <u>.yellow</u>{</p>
+                        <p>
+                            <strong>order:1;</strong>
+                        </p>
+                        <p>align-self: flex-end</p>
+                        <p>}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>flex-wrap</p>
+                        <p>Controla la dirección del eje secundario y la dirección en la que las nuevas
+                            líneas se apilan.
+                        </p>
+                        <ul>
+                            <li>
+                                <u>nowrap</u>
+                                Cada elemento se ajusta en una sola línea.</li>
+                            <u>wrap:</u>
+                            los elementos se envuelven alrededor de líneas adicionales.</li>
+                        <li>
+                            <u>wrap-reverse:</u>
+                            Los elementos se envuelven alrededor de líneas adicionales en reversa.
+                        </li>
+                        <li>
+                            <u>row-reverse:</u>
+                            Elementos son colocados en la dirección opuesta al texto.
+                        </li>
+                        <li>
+                            <u>column-reverse:</u>
+                            Elementos se colocan de abajo hacia arriba.
+                        </li>
+                    </ul>
+                </td>
+                <td>18
+                </td>
+                <td>
+                    <p>#pond {</p>
+                    <p>display: flex;</p>
+                    <p>align-items:flex-star;</p>
+                    <p>}</p>
+                    <p>
+                        <u>.yellow</u>{</p>
+                    <p>
+                        <strong>flex-wrap:wrap</strong>
+                    </p>
+                    <p>}</p>
+                </td>
+            </tr>
+            <tr>
+                <td>flex-wrap + flex-direction</td>
+                <td>19
+                </td>
+                <td>
+                    <p>#pond {</p>
+                    <p>display: flex;</p>
+                    <p>flex-direction:column;</p>
+                    <p>
+                        <strong>flex-wrap:wrap</strong>
+                    </p>
+                    <p>}</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>flex-flow</p>
+                    <p>combina las propiedades flex-direction y flex-wrap para colocar los elementos
+                        flexibles.</p>
+                </td>
+                <td>20</td>
+                <td>
+                    <p>#pond {</p>
+                    <p>display: flex;</p>
+                    <p>flex-flow:column wrap;</p>
+                    <p>}</p>
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2">
+                    <p>align-content (Propiedad de alineación)</p>
+                    <p>para establecer como múltiples líneas están separadas una de otra. Esta
+                        propiedad acepta los siguientes valores:
+                    </p>
+                    <ul>
+                        <li>
+                            <u>flex-start:</u>
+                            Las líneas se posicionan en la parte superior del contenedor.</li>
+                        <u>wrap:</u>
+                        Las líneas se posicionan en la parte inferior del contenedor.</li>
+                    <li>
+                        <u>center:</u>
+                        Las líneas se posicionan en el centro (verticalmente hablando) del contenedor.
+                    </li>
+                    <li>
+                        <u>space-between:</u>
+                        Las líneas se muestran con la misma distancia entre ellas.
+                    </li>
+                    <li>
+                        <u>space-around:</u>
+                        Las líneas se muestran con la misma separación alrededor de ellas.
+                    </li>
+                    <li>
+                        <u>stretch:</u>
+                        Las líneas se estiran para ajustarse al contenedor.
+                    </li>
+                </ul>
+                <p>Esto puede ser confuso, pero align-content determina el espacio entre las
+                    líneas, mientras que align-items determina como los elementos en su conjunto
+                    están alineados dentro del contenedor. Cuando hay solo una línea, align-content
+                    no tiene efecto</p>
+            </td>
+            <td>21
+            </td>
+            <td>
+                <p>flex-flow</p>
+                <p>combina las propiedades flex-direction y flex-wrap para colocar los elementos
+                    flexibles.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>22</td>
+            <td>
+                <p>#pond {</p>
+                <p>display: flex;</p>
+                <p>flex-wrap:wrap;</p>
+                <p>align-content:<strong>flex-end</strong>;</p>
+                <p>}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>align-content + flex-flow + justify-content</td>
+            <td>23
+            </td>
+            <td>
+                <p>#pond {</p>
+                <p>display: flex;</p>
+                <p>flex-wrap:wrap;</p>
+                <p>flex-direction:<strong>column-reverse</strong>;</p>
+                <p>align-content:<strong>center</strong>;</p>
+                <p>}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>align-content + flex-flow+justify-content+align-content</td>
+            <td>24
+            </td>
+            <td>
+                <p>#pond {</p>
+                <p>display: flex;</p>
+                <p>flex-flow:column-reverse wrap-reverse;</p>
+                <p>justify-content:<strong>center</strong>;</p>
+                <p>align-content:<strong>space-between</strong>;</p>
+                <p>}</p>
+            </td>
+        </td>
+    </tr>
+</tbody>
+</table>
+</div>
+</article>
+<article>
+<h1>Conceptos aprendidos:</h1>
+<p>
+<u>Contenedor flexible:</u>
+área de un documento diseñado con flexbox (elemento padre) que tendrá en su
+interior cada uno de los ítems flexibles y adaptables.</p>
+<p>
+<u>Ítem:</u>
+Cada uno de los hijos flexibles que tendrá el contenedor en su interior.
+</p>
+<p>
+<u>Eje principal:</u>Eje a lo largo del cual los elementos flexibles se suceden
+unos a otros. Por defecto, es en horizontal (fila).
+</p>
+<p>
+<u>Eje secundario:</u>
+Es el perpendicular a la principal. Si la principal es en horizontal, la
+secundaria será en vertical, y viceversa.</p>
+<p>
+<u>Flexbox:</u>
+Módulo de CSS que define un modelo de caja, que tiene capacidad de alinear y
+justificar elementos (ítems) en los ejes principal y transversal del contenedor
+flexible, y de distribuir espacio entre elementos flexibles que contiene. Esta
+capacidad, fue el motivo por que el que se diseñó este modelo unidimensional de
+layout, porque permite colocar los diferentes elementos de una página, de
+manera, que se comporten de forma predecible cuando el diseño de la página debe
+acomodarse a diferentes tamaños de pantalla y diferentes dispositivos.</p>
+</article>
+<!---------------------------------- PIE --------------------------->
+<hr>
+<footer>
+<a href="02_Mapa.html">Anterior</a>
+<a href="00_menú.html">Inicio</a>
+<a href="04_video.html">Siguiente</a>
+</footer>
+</body>
+</html>

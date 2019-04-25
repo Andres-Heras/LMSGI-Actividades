@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!--------------------------- METADATOS --------------------------->
+        <meta charset="utf-8">
+        <meta name="author" content="Andrés Heras Leiva">
+        <meta name="description" content="Ejercicios del libro Introducción al XHTML">
+        <meta name="keywords" content="xhtml,html5,ejercicios,LMGSI,ASIR"/>
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <!--https://developer.mozilla.org/es/docs/M%C3%B3vil/Viewport_meta_tag-->
+        <!---------------------------- Título ----------------------------->
+        <title>Andrés Heras Leiva 1ºASIR</title>
+        <!------------ RECURSOS ENLAZADOS (CSS,RSS,JAVASCRIPT)-------------->
+        <!--------------------------- FAVICON ----------------------------->
+        <link rel="shortcut icon" href="../pictures/favicon.png" type="image/.png"/>
+        <!-------------------------- CSS EXTERNO ------------------------>
+        <link rel="stylesheet" type="text/css" href="../css/estilo.css">
+    </head>
+    <!------------------------------- CUERPO ---------------------------->
+    <body>
+        <!--------------------------- LAYOUT ---------------------------->
+        <!--------------------------- CABECERA -------------------------->
+        <header>
+            <h1>Ejercicios CAP.08-010 de "Introducción al XHTML"</h1>
+            <h2>FORMULARIOS</h2>
+        </header>
+        <!------------------- BARRA DE NAVEGACIÓN --------------------->
+        <nav>
+            <ul class="navbar">
+                <li>
+                    <a href="../index.html">¡Bienvenidos!</a>
+                </li>
+                <li>
+                    <a href="xhtml00.html">Libro Introducción al XHTML</a>
+                </li>
+                <li>
+                    <a href="../Formularios/Findex.html">Formularios</a>
+                </li>
+                <li>
+                    <a href="../Tablas/tablas.html">Tablas</a>
+                </li>
+                <li>
+                    <a href="../ListadoV/00_LVindex.html">Listado Variado</a>
+                </li>
+                <li>
+                    <a href="../ejercicios CSS/00_CSS.html">Practicas CSS</a>
+                </li>
+                <li>
+                    <a href="../RSS/RSSindex.html">Sindicación de Contenidos</a>
+                </li>
+                <li>
+                    <a href="../pictures/enconstrucción.png">Exámenes</a>
+                </li>
+            </ul>
+        </nav>
+        <body>
+        <!------------------------------ ARTÍCULO -------------------->
+        <article>
+            <h1>Ejercicio 16</h1>
+            <br>
+            <form>
+                <fieldset>
+                    <legend>Datos básicos</legend>
+                    Nombre<br>
+                    <input type="text" name="producto" size="48" maxlength="30"/>
+                    <p></p>
+                    Descripción<br>
+                    <textarea name="descripción" cols="50" rows="5"></textarea>
+                    <p></p>
+                    Foto
+                    <input type="file" name="foto"/>
+                    <p></p>
+                    <input type="checkbox"/>
+                    Añadir contador de visitas
+                </fieldset>
+                <fieldset>
+                    <legend>Datos económicos</legend>
+                    Precio<br>
+                    <input type="text" name="dinero" size="1"/>
+                    &euro;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Impuestos
+                    <select>
+                        <option>4%</option>
+                        <option>7%</option>
+                        <option>16%</option>
+                        <option>25%</option>
+                    </select>
+                    <p></p>
+                    Promoción<br>
+                    <input type="radio" name="Promoción" value="Ninguno" checked="checked"/>Ninguno<br>
+                    <input type="radio" name="Promoción" value="Transporte gratuito"/>Transporte gratuito<br>
+                    <input type="radio" name="Promoción" value="Descuento 5%"/>Descuento 5%
+                    <p></p>
+                    <input type="submit" value="Enviar" name="Enviar"/>
+                    <input type="reset" value="resetear" name="Reset"/>
+                </fieldset>
+
+            </form>
+
+            <!---------------------------------- PIE --------------------------->
+            <hr>
+            <footer>
+                    <a href="xhtml00.html">Inicio</a>
+                    <a href="xhtml06.html">Anterior</a>
+                </footer>
+            </div>
+        </body>
+        </html>

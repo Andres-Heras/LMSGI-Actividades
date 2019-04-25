@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!--------------------------- METADATOS --------------------------->
+        <meta charset="utf-8">
+        <meta name="author" content="Andrés Heras Leiva">
+        <meta name="description" content="Video">
+        <meta name="keywords" content="xhtml,css,html5,ejercicios,LMGSI,ASIR"/>
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <!--https://developer.mozilla.org/es/docs/M%C3%B3vil/Viewport_meta_tag-->
+        <!---------------------------- Título ----------------------------->
+        <title>Andrés Heras Leiva 1ºASIR</title>
+        <!------------ RECURSOS ENLAZADOS (CSS,RSS,JAVASCRIPT)-------------->
+        <!--------------------------- FAVICON ----------------------------->
+        <link rel="shortcut icon" href="../imágenes/favicon.png" type="image/.png"/>
+        <!-------------------------- CSS EXTERNO ------------------------>
+        <link rel="stylesheet" type="text/css" href="../css/estilo.css">
+    </head>
+    <!------------------------------- CUERPO ---------------------------->
+    <body>
+        <!--------------------------- LAYOUT ---------------------------->
+        <!--------------------------- CABECERA -------------------------->
+        <header>
+            <h1>FLEXBOX FROGGY</h1>
+        </header>
+        <!------------------- BARRA DE NAVEGACIÓN --------------------->
+        <nav><ul class="navbar">
+            <li>
+                <a href="../XHTML/xhtml00.html">Libro Introducción al XHTML</a>
+            <li>
+                <a href="../Formularios/Findex.html">Formularios</a>
+            <li>
+                <a href="../Tablas/tablas.html">Tablas</a>
+            <li>
+                <a href="../ListadoLV/00_LVindex.html">Listado Variado</a>
+            <li>
+                <a href="00_CSS.html">Prácticas CSS</a>
+            <li>
+                <a href="../RSS/RSSindex.html">Sindicación de Contenidos</a>
+            </li>
+            <li>
+                <a href="../pictures/enconstrucción.png">Exámenes</a>
+            </li>
+        </ul>
+    </nav>
+        <!------------------------------ ARTÍCULO -------------------->
+        <body>
+            <article>
+                <table class="blueTable">
+                        <tbody>
+                        <tr>
+                        <td width="57%"><p><b>Propiedades</b></p></td>
+                        <td width="7%"><p><b>nº</b></p></td>
+                        <td width="34%"><p><b>RESPUESTA</b></p></td>
+                        </tr>
+                        
+                        <tr>
+                        <td rowspan="2" width="57%"><p>grid-column-star</p>
+                        
+                        <p><i>(Indica en que columna empezará el item de la cuadrícula)</i></p></td>
+                        <td width="7%"><p><b>1</b></p></td>
+                        <td width="34%"><p>grid-column-start:3</p></td>
+                        </tr>
+                        
+                        <tr>
+                        <td width="7%"><p><b>2</b></p></td>
+                        <td width="34%"><p>grid-column-start.5</p></td>
+                        </tr>
+                        
+                        <tr>
+                        <td rowspan="3" width="57%"><p>grid-column-end</p>
+                        
+                        <p><i>(Indica en que columna acabará el item de la cuadrícula)</i></p></td>
+                        <td width="7%"><p><b>3</b></p></td>
+                        <td width="34%"><p>grid-column-end:4</p></td>
+                        </tr>
+                        
+                        <tr>
+                        <td width="7%"><p><b>4</b></p></td>
+                        <td width="34%"><p>grid-coumn-end:2</p></td>
+                        </tr>
+                        
+                        <tr>
+                        <td width="7%"><p><b>5</b></p></td>
+                        <td width="34%"><p>grid-column-end:-2</p></td>
+                        </tr>
+                        
+                        <tr>
+                        <td width="57%"><p>grid-column-star con valores negativos.</p>
+                        
+                        <p>(Los números negativos permiten hacer referencia a las líneas comienzando por el final de la rejilla.)</p></td>
+                        <td width="7%"><p><b>6</b></p></td>
+                        <td width="34%"><p>grid-column-start:-3</p></td>
+                        </tr>
+                        
+                        <tr>
+                        <td rowspan="3" width="57%"><p>grid-column-start:span</p>
+                        
+                        <p>grid-column-end:span</p>
+                        
+                        <p>(la</p></td>
+                        <td width="7%"><p><b>7</b></p></td>
+                        <td width="34%"><p>grid-column-end:span 2</p></td>
+                        </tr>
+                        
+                        <tr>
+                        <td width="7%"><p><b>8</b></p></td>
+                        <td width="34%"><p>grid-column-end:span 5</p></td>
+                        </tr>
+                        
+                        <tr>
+                        <td width="7%"><p><b>9</b></p></td>
+                        <td width="34%"><p>grid-column-start:span 3</p></td>
+                        </tr>
+                        
+                        <tr>
+                        <td width="57%"><p>grid-column</p></td>
+                        <td width="7%"><p><b>10</b></p></td>
+                        <td width="34%"><p>grid-column:4/6</p></td>
+                        </tr>
+                        
+                        <tr>
+                        <td width="57%"><p>grid-column + span</p></td>
+                        <td width="7%"><p><b>11</b></p></td>
+                        <td width="34%"><p>grid-column:2/span 3</p></td>
+                        </tr>
+                        
+                        <tr>
+                        <td width="57%"><p>grid-row-start</p>
+                        
+                        <p><i>(Indica en que fila empezará el item de la cuadrícula)</i></p></td>
+                        <td width="7%"><p><b>12</b></p></td>
+                        <td width="34%"><p>grid-row-start:3</p></td>
+                        </tr>
+                        
+                        <tr>
+                        <td width="57%"><p>grid-row </p>
+                        
+                        <p><i>(Atajo de grid-row-start y grid-row-end)</i></p></td>
+                        <td width="7%"><p><b>13</b></p></td>
+                        <td width="34%"><p>grid-row:3/6</p></td>
+                        </tr>
+                        
+                        <tr>
+                        <td rowspan="2" width="57%"><p>grid-column + grid row </p>
+                        
+                        <p><i>(Seleccionamos un item ó un área completa)</i></p></td>
+                        <td width="7%"><p><b>14</b></p></td>
+                        <td width="34%"><p>grid-column:2;</p>
+                        
+                        <p>grid-row:5</p></td>
+                        </tr>
+                        
+                        <tr>
+                        <td width="7%"><p><b>15</b></p></td>
+                        <td width="34%"><p>grid-column:2/6;</p>
+                        
+                        <p>grid-row:1/6</p></td>
+                        </tr>
+                        
+                        <tr>
+                        <td rowspan="2" width="57%"><p>grid-area</p>
+                        
+                        <p>(Indica un nombre al area especificada, para su utilización con <i>grid-template-area</i>)</p></td>
+                        <td width="7%"><p><b>16</b></p></td>
+                        <td width="34%"><p>grid-area:1/2/4/6</p></td>
+                        </tr>
+                        
+                        <tr>
+                        <td width="7%"><p><b>17</b></p></td>
+                        <td width="34%"><p>grid-area:2/3/5/6</p></td>
+                        </tr>
+                        
+                        <tr>
+                        <td rowspan="2" width="57%"><p>order</p>
+                        
+                        <p>(Con esta propiedad anulamos el sentido</p></td>
+                        <td width="7%"><p><b>18</b></p></td>
+                        <td width="34%"><p>order:3</p></td>
+                        </tr>
+                        
+                        <tr>
+                        <td width="7%"><p><b>19</b></p></td>
+                        <td width="34%"><p>order:-1</p></td>
+                        </tr>
+                        
+                        <tr>
+                        <td rowspan="6" width="57%"><p>grid-template-columns</p>
+                        
+                        <p>(Establece el tamaño de cada columna)</p></td>
+                        <td width="7%"><p><b>20</b></p></td>
+                        <td width="34%"><p>grid-template-columns:50%;</p></td>
+                        </tr>
+                        
+                        <tr>
+                        <td width="7%"><p><b>21</b></p></td>
+                        <td width="34%"><p>grid-template-columns:repeat(8,12.5%)</p></td>
+                        </tr>
+                        
+                        <tr>
+                        <td width="7%"><p><b>22</b></p></td>
+                        <td width="34%"><p>grid-template-columns:100px 3em 40%</p></td>
+                        </tr>
+                        
+                        <tr>
+                        <td width="7%"><p><b>23</b></p></td>
+                        <td width="34%"><p>grid-template-columns:1fr 5fr;</p></td>
+                        </tr>
+                        
+                        <tr>
+                        <td width="7%"><p><b>24</b></p></td>
+                        <td width="34%"><p>grid-template-columns:50px 1fr 1fr 1fr 50px;</p></td>
+                        </tr>
+                        
+                        <tr>
+                        <td width="7%"><p><b>25</b></p></td>
+                        <td width="34%"><p>grid-template-columns:75px 3fr 2fr</p></td>
+                        </tr>
+                        
+                        <tr>
+                        <td width="57%"><p>grid-template-rows</p>
+                        
+                        <p>(Establece el tamaño de cada fila)</p>
+                        
+                        </td>
+                        <td width="7%"><p><b>26</b></p></td>
+                        <td width="34%"><p>grid-template-rows:50px 0fr 0fr 0fr 1fr</p></td>
+                        </tr>
+                        
+                        <tr>
+                        <td rowspan="2" width="57%"><p>grid-template</p></td>
+                        <td width="7%"><p><b>27</b></p></td>
+                        <td width="34%"><p>grid-template:60%/200px</p></td>
+                        </tr>
+                        
+                        <tr>
+                        <td width="7%"><p><b>28</b></p></td>
+                        <td width="34%"><p>grid-template: 1fr 50px /20% 80%</p></td>
+                        </tr>
+                        
+                        </tbody>
+                        </table>
+                        
+                        <p>Enlaces de interés:</p>
+                        
+                        <p><a href="https://lenguajecss.com/p/css/propiedades/grid-css">https://lenguajecss.com/p/css/propiedades/grid-css</a></p>
+                        
+                        <p><a href="https://escss.blogspot.com/2016/02/colocacion-items-css-grid-layout.html">https://escss.blogspot.com/2016/02/colocacion-items-css-grid-layout.html</a></p>
+                        
+                        <p><a href="https://medium.freecodecamp.org/css-grid-a-simple-layout-design-tutorial-5312a4a8bcaf">https://medium.freecodecamp.org/css-grid-a-simple-layout-design-tutorial-5312a4a8bcaf</a></p>
+                        
+                        <p><a href="https://www.sitepoint.com/order-align-items-grid-layout/">https://www.sitepoint.com/order-align-items-grid-layout/</a></p>
+                        
+        </article>
+<!---------------------------------- PIE --------------------------->
+<hr>
+<footer>
+<a href="02_Mapa.html">Anterior</a>
+<a href="00_menú.html">Inicio</a>
+<a href="04_video.html">Siguiente</a>
+</footer>
+</body>
+</html>

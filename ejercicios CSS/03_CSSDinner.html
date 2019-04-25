@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!--------------------------- METADATOS --------------------------->
+        <meta charset="utf-8">
+        <meta name="author" content="Andrés Heras Leiva">
+        <meta name="description" content="Video">
+        <meta name="keywords" content="xhtml,css,html5,ejercicios,LMGSI,ASIR"/>
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <!--https://developer.mozilla.org/es/docs/M%C3%B3vil/Viewport_meta_tag-->
+        <!---------------------------- Título ----------------------------->
+        <title>Andrés Heras Leiva 1ºASIR</title>
+        <!------------ RECURSOS ENLAZADOS (CSS,RSS,JAVASCRIPT)-------------->
+        <!--------------------------- FAVICON ----------------------------->
+        <link rel="shortcut icon" href="../pictures/favicon.png" type="image/.png"/>
+        <!-------------------------- CSS EXTERNO ------------------------>
+        <link rel="stylesheet" type="text/css" href="../css/estilo.css">
+    </head>
+    <!------------------------------- CUERPO ---------------------------->
+    <body>
+        <!--------------------------- LAYOUT ---------------------------->
+        <!--------------------------- CABECERA -------------------------->
+        <header>
+            <h1 id="arriba">Prácticas css</h1>
+            <h2>CSS DINNER</h2>
+        </header>
+        <!------------------- BARRA DE NAVEGACIÓN --------------------->
+        <nav><ul class="navbar">
+            <li>
+                <a href="../XHTML/xhtml00.html">Libro Introducción al XHTML</a>
+            <li>
+                <a href="../Formularios/Findex.html">Formularios</a>
+            <li>
+                <a href="../Tablas/tablas.html">Tablas</a>
+            <li>
+                <a href="../ListadoLV/00_LVindex.html">Listado Variado</a>
+            <li>
+                <a href="00_CSS.html">Prácticas CSS</a>
+            <li>
+                <a href="../RSS/RSSindex.html">Sindicación de Contenidos</a>
+            </li>
+            <li>
+                <a href="../pictures/enconstrucción.png">Exámenes</a>
+            </li>
+        </ul>
+    </nav>
+        <body>
+            <article>
+        <!------------------------------ ARTÍCULO -------------------->
+            <table class="blueTable">
+                <thead>
+                    <tr>
+                        <th>NºEjercicio</th>
+                        <th>Respuesta</th>
+                        <th>Tipo Selector</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <td colspan="3"></td>
+                        </td>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr>
+                        <td>01</td>
+                        <td>plate
+                        </td>
+                        <td>TIPO</td>
+                    </tr>
+                    <tr>
+                        <td>02</td>
+                        <td>bento</td>
+                        <td>TIPO</td>
+                    </tr>
+                    <tr>
+                        <td>03</td>
+                        <td>#fancy</td>
+                        <td>Selector ID</td>
+                    </tr>
+                    <tr>
+                        <td>04</td>
+                        <td>plate apple</td>
+                        <td>DESCENDIENTE</td>
+                    </tr>
+                    <tr>
+                        <td>05</td>
+                        <td>#fancy pickle</td>
+                        <td>ID + DESCENDIENTE</td>
+                    </tr>
+                    <tr>
+                        <td>06</td>
+                        <td>.small</td>
+                        <td>CLASE</td>
+                    </tr>
+                    <tr>
+                        <td>07</td>
+                        <td>orange.small</td>
+                        <td>CLASE</td>
+                    </tr>
+                    <tr>
+                        <td>08</td>
+                        <td>bento orange.small</td>
+                        <td>VARIOS TIPOS + CLASE</td>
+                    </tr>
+                    <tr>
+                        <td>09</td>
+                        <td>bento, plate, .pickle</td>
+                        <td>UNIVERSAL</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>*</td>
+                        <td>UNIVERSAL</td>
+                    </tr>
+                    <tr>
+                        <td>11
+                        </td>
+                        <td>plate *</td>
+                        <td>UNIVERSAL</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>plate+apple</td>
+                        <td>Hermanos ADYACENTES</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>pickle~pickle_13</td>
+                        <td>Hermanos GENERALES</td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>plate>apple</td>
+                        <td>HIJO</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>orange: first-child</td>
+                        <td>PSEUDOSELECTOR DE PRIMER HIJO</td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td>plate :only-child</td>
+                        <td>Pseudoselector de HIJO UNICO</td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td>.small:last-child</td>
+                        <td>Pseudoselector de ULTIMO HIJO</td>
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td>plate:nth-child(3)
+                        </td>
+                        <td>Pseudoselector de NTH HIJO</td>
+                    </tr>
+                    <tr>
+                        <td>19</td>
+                        <td>bento:nth-last-child(3)
+                        </td>
+                        <td>Pseudoselector NTH de último hijo</td>
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td>apple :first-of-type</td>
+                        <td>Primer elemento de un tipo específico</td>
+                    </tr>
+                    <tr>
+                        <td>21</td>
+                        <td>plate:nth-of-type(even)
+                        </td>
+                        <td>Nth de un tipo</td>
+                    </tr>
+                    <tr>
+                        <td>22</td>
+                        <td>plate:nth-of-type(2n+3)
+                        </td>
+                        <td>NTH de tipo con FÓRMULA</td>
+                    </tr>
+                    <tr>
+                        <td>23</td>
+                        <td>plate apple:only-of-type
+                        </td>
+                        <td>cell3_23</td>
+                    </tr>
+                    <tr>
+                        <td>24</td>
+                        <td>.small:last-of-type
+                        </td>
+                        <td>ÚLTIMO de un tipo de Selector</td>
+                    </tr>
+                    <tr>
+                        <td>25</td>
+                        <td>bento:empty
+                        </td>
+                        <td>Selector VACIO</td>
+                    </tr>
+                    <tr>
+                        <td>26</td>
+                        <td>apple:not(.small)
+                        </td>
+                        <td>cell3_26</td>
+                    </tr>
+                    <tr>
+                        <td>27</td>
+                        <td>[for]
+                        </td>
+                        <td>Selector ATRIBUTO</td>
+                    </tr>
+                    <tr>
+                        <td>28</td>
+                        <td>plate[for]
+                        </td>
+                        <td>Selector con Valor de atributo</td>
+                    </tr>
+                    <tr>
+                        <td>29</td>
+                        <td>bento[for="Vitaly"]
+                        </td>
+                        <td>Selector con el valor de atributo...</td>
+                    </tr>
+                    <tr>
+                        <td>30</td>
+                        <td>[for^="Sa"]
+                        </td>
+                        <td>Selector con el valor de atributo que COMIENZA...  </td>
+                    </tr>
+                    <tr>
+                        <td>31</td>
+                        <td>[for$="ato"]
+                        </td>
+                        <td>Selector con el valor de atributo que ACABA...</td>
+                    </tr>
+                    <tr>
+                        <td>32</td>
+                        <td>[for*="obb"]</td>
+                        <td>Selector con el valor de atributo que ACABA...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </article>
+    </br>
+    <!---------------------------------- PIE --------------------------->
+    <hr>
+    <footer>
+        <a class="wlink"href="#arriba">Arriba&nbsp</a>
+        <a class="wlink"href="Froggy.html">Siguiente</a>
+    </footer>
+</body>
+</html>

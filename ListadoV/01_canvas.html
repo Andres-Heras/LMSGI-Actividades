@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!--------------------------- METADATOS --------------------------->
+        <meta charset="utf-8">
+        <meta name="author" content="Andrés Heras Leiva">
+        <meta name="description" content="Video">
+        <meta name="keywords" content="xhtml,css,html5,ejercicios,LMGSI,ASIR"/>
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <!--https://developer.mozilla.org/es/docs/M%C3%B3vil/Viewport_meta_tag-->
+        <!---------------------------- Título ----------------------------->
+        <title>Andrés Heras Leiva 1ºASIR</title>
+        <!------------ RECURSOS ENLAZADOS (CSS,RSS,JAVASCRIPT)-------------->
+        <!--------------------------- FAVICON ----------------------------->
+        <link rel="shortcut icon" href="../pictures/favicon.png" type="image/.png"/>
+        <!-------------------------- CSS EXTERNO ------------------------>
+        <link rel="stylesheet" type="text/css" href="../css/estilo.css">
+    </head>
+    <!------------------------------- CUERPO ---------------------------->
+    <body>
+        <!--------------------------- LAYOUT ---------------------------->
+        <!--------------------------- CABECERA -------------------------->
+        <header>
+            <h1>Listado Variado</h1>
+        </header>
+        <!------------------- BARRA DE NAVEGACIÓN --------------------->
+        <nav><ul class="navbar">
+            <ul class="navbar">
+                <li>
+                    <a href="../XHTML/xhtml00.html">Libro Introducción al XHTML</a>
+                <li>
+                    <a href="../Formularios/Findex.html">Formularios</a>
+                <li>
+                    <a href="../Tablas/tablas.html">Tablas</a>
+                <li>
+                    <a href="00_LVindex.html">Listado Variado</a>
+                <li>
+                    <a href="../ejercicios CSS/00_CSS.html">Prácticas CSS</a>
+                <li>
+                    <a href="../RSS/RSSindex.html">Sindicación de Contenidos</a>
+                </li>
+                <li>
+                    <a href="../pictures/enconstrucción.png">Exámenes</a>
+                </li>
+            </ul>
+        </nav>
+            <body>
+        <!------------------------------ ARTÍCULO -------------------->
+        <article>
+            <h1>Usos del getContext(), fillStyle y fillRect()</h1>
+            <h2>Cuadrados<h2>
+                    <canvas id="Cuadrado1" title="Cuadrado Rojo" height="200" width="200"></canvas>
+                    <script type="text/javascript">
+                        let canvas = document.getElementById('Cuadrado1');
+                        let contexto = canvas.getContext('2d');
+                        contexto.fillStyle = '#ff0000';
+                        contexto.fillRect(0, 0, 200, 200);
+                    </script>
+                    <canvas id="Cuadrado2" title="Cuadrado Verde" height="150" width="150"></canvas>
+                    <script type="text/javascript">
+                        let canvas1 = document.getElementById('Cuadrado2');
+                        let contexto1 = canvas1.getContext('2d');
+                        contexto1.fillStyle = '#00ff00';
+                        contexto1.fillRect(0, 0, 150, 150);
+                    </script>
+                    <canvas id="Cuadrado3" title="Cuadrado Azul" height="100" width="100"></canvas>
+                    <script type="text/javascript">
+                        let canvas3 = document.getElementById('Cuadrado3');
+                        let contexto3 = canvas3.getContext('2d');
+                        contexto3.fillStyle = '#0000ff';
+                        contexto3.fillRect(0, 0, 100, 100);
+                    </script>
+                    <p>
+                        <h2>Rectangulos</h2>
+                    </p>
+                    <canvas id="Rectangulo1" title="Rectangulo Casi Blanco" height="50" width="100"></canvas>
+                    <script type="text/javascript">
+                        let canvas4 = document.getElementById('Rectangulo1');
+                        let contexto4 = canvas4.getContext('2d');
+                        contexto4.fillStyle = '#efefef';
+                        contexto4.fillRect(0, 0, 150, 50);
+                    </script>
+                    <canvas id="Rectangulo2" title="Rectangulo Gris" height="100" width="50"></canvas>
+                    <script type="text/javascript">
+                        let canvas5 = document.getElementById('Rectangulo2');
+                        let contexto5 = canvas5.getContext('2d');
+                        contexto5.fillStyle = '#BFBFBF';
+                        contexto5.fillRect(0, 0, 150, 100);
+                    </script>
+                    <canvas id="Rectangulo3" title="Rectangulo Negro" height="50" width="100"></canvas>
+                    <script type="text/javascript">
+                        let canvas6 = document.getElementById('Rectangulo3');
+                        let contexto6 = canvas6.getContext('2d');
+                        contexto6.fillStyle = '#000000';
+                        contexto6.fillRect(0, 0, 150, 50);
+                    </script>
+                    <p>
+                        <h1>Usos del getContext(), fillStyle y fillRect()</h1>
+                        <h2>Esferas</h2>
+                    </p>
+                    <canvas id='idcirculo' title="Esfera 1"></canvas>
+                    <script type="text/javascript">
+                        {
+                            let circulo = document
+                                .getElementById('idcirculo')
+                                .getContext("2d")
+                                let gradiante = circulo.createLinearGradient(0, 0, 170, 0);
+                            gradiante.addColorStop(0, "black");
+                            gradiante.addColorStop(1, "white");
+                            circulo.fillStyle = gradiante;
+                            circulo.beginPath();
+                            circulo.arc(100, 75, 50, 0, 2 * Math.PI);
+                            circulo.stroke();
+                            circulo.fill();
+                        }
+                    </script>
+                    <canvas id='idcirculo2' title="Esfera 2"></canvas>
+                    <script type="text/javascript">
+                        {
+                            let circulo2 = document
+                                .getElementById('idcirculo2')
+                                .getContext("2d")
+                                // let gradiante2 = circulo2.createLinearGradient(0, 0, 170, 0);
+                                // gradiante2.addColorStop(1, "PINK");
+
+                                circulo2
+                                .fillStyle = "#ff00ff";
+                            circulo2.beginPath();
+                            circulo2.arc(100, 75, 50, 0, 2 * Math.PI);
+                            circulo2.stroke();
+                            circulo2.fill();
+                        }
+                    </script>
+                    <canvas id='idcirculo3' title="Esfera 3"></canvas>
+                    <script type="text/javascript">
+                        {
+                            let circulo3 = document
+                                .getElementById('idcirculo3')
+                                .getContext("2d")
+                                let gradiante3 = circulo3.createLinearGradient(0, 0, 170, 0);
+                            gradiante3.addColorStop(1, "white");
+                            circulo3.fillStyle = gradiante3;
+                            circulo3.beginPath();
+                            circulo3.arc(100, 75, 50, 0, 2 * Math.PI);
+                            circulo3.stroke();
+                            circulo3.fill();
+                        }
+                    </script>
+                </article>
+                <!---------------------------------- PIE --------------------------->
+                <hr>
+                <footer>
+                            <a href="00_menú.html">Inicio</a>
+                            <a href="02_Mapa.html">Siguiente</a>
+                </footer>
+        </body>
+    </html>
