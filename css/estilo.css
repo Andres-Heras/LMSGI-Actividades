@@ -15,6 +15,11 @@ footer,header {
     color: white;
     width: 1;
 }
+.error {
+    background-color: #e6231c;
+    color: white;
+    width: 1;
+}
 .línea {
     text-decoration-line:underline;
     font-style:italic;
