@@ -21,8 +21,8 @@
         <!--------------------------- LAYOUT ---------------------------->
         <!--------------------------- CABECERA -------------------------->
         <header>
-            <h1>Ejercicios del CAP.01-03 de "Introducción al XHTML"</h1>
-            <h2>HTML:Carácterísticas y Etiquetas</h2>
+            <h1>XML.VALIDACIÓN</h1>
+            <h2>Actividad: Documentos XML bien formados</h2>
         </header>
         <!------------------- BARRA DE NAVEGACIÓN --------------------->
         <nav>
@@ -66,18 +66,17 @@
                            &lt/entrada&gt
                         &lt/agenda&gt</pre>
             <hr>
-            <p>Corrección:
-            </p>
+            <p>Corrección:</p>
+              <p>El primer error es debido a que faltaba una "?" y el segundo era debido al acento en la etiqueta &ltxml versión&gt</p>
             <pre>
-        &lt?xml version="1.0" encoding="iso-8859-1"?&gt
-        &ltagenda&gt
-           &ltentrada&gt
-             &ltnombre-completo&gtmarta elena zorrilla&lt/nombre-completo&gt
-           &lt/entrada&gt
-        &lt/agenda&gt
-</pre>
+                &lt?xml version="1.0"   encoding="ISO-8859-1"?&lt!--Error at line 1, column 1:unclosed token--&gt&lt!--Error at line 1, column 13: XML declaration not well-formed--&gt
+                &ltagenda&gt
+                   &ltentrada&gt
+                     &ltnombre-completo&gtMarta Elena Zorrilla
+                   &lt/entrada&gt
+                &lt/agenda&gt
+            <pre>
         </article>
-
         <article>
             <p class="ejercicio">Ejercicio B</p>
             <pre>
@@ -95,6 +94,9 @@
                   &ltcorreo-e   href="zorrillm@unican.es"&gt&lt/correo-e&gt
         </pre>
             <p>Corrección:
+            </p>
+            <p>El primer error estaba en la declaración porque hay una etiqueta html cuando sería una etiqueta xml.
+              El seguendo error es el doble cierre que se le había puesto a la &ltcompleto&gt en la línea 4.
             </p>
             <pre>
         &lt?xml version="1.0" encoding="iso-8859-1"?&gt<span class="ejercicio">&lt!--error at line 1, column 47:unclosed token--&gt</span>
@@ -130,37 +132,38 @@
             </pre>
             <hr>
                         <p>Corrección: </p>
+                        <p>El error está en que no tiene raíz (error línea 6). y que la etiqueta autor no está bien escrita (error línea 12)</p>
                         <pre>
-                        &lt?xml version="1.0" encoding="utf-8"?6gt
-&ltfilmografía6gt
-&ltpelicula6gt
-  &lttitulo6gtcon faldas y a lo loco&lt/titulo6gt
-  &ltdirector6gtbilly wilder&lt/director6gt
-&lt/pelicula6gt
-&lt!--error at line 6, column 1: junk after document element--6gt
-&ltpelicula6gt  
-  &ltdirector6gtleo mccarey&lt/director6gt
-  &lttitulo6gtsopa de ganso&lt/titulo6gt
-&lt/pelicula6gt
-&ltautor 6gtbarto&lt/autor6gt
-&lt!--error at line 12, column 17:mismatched tag--6gt
-&lt/filmografía6gt
+                        &lt?xml version="1.0" encoding="utf-8"?&gt
+&ltfilmografía&gt
+&ltpelicula&gt
+  &lttitulo&gtcon faldas y a lo loco&lt/titulo&gt
+  &ltdirector&gtbilly wilder&lt/director&gt
+&lt/pelicula&gt
+&lt!--error at line 6, column 1: junk after document element--&gt
+&ltpelicula&gt  
+  &ltdirector&gtleo mccarey&lt/director&gt
+  &lttitulo&gtsopa de ganso&lt/titulo&gt
+&lt/pelicula&gt
+&ltautor &gtbarto&lt/autor&gt
+&lt!--error at line 12, column 17:mismatched tag--&gt
+&lt/filmografía&gt
                 </pre>
         </article>
         <hr>
         <article>
             <p class="ejercicio">Ejercicio D</p>
             <pre>
-                        &lt?xml version="1.0" encoding="utf-8"?6gt
-                        &ltdeportistas6gt
-                          &ltdeportista6gt
-                            &ltdeporte atletismo /6gt
-                            &ltnombre6gtjesse owens&lt/nombre6gt
-                          &ltdeportista6gt
-                            &ltdeporte natación /6gt
-                            &ltnombre6gtmark spitz&lt/nombre6gt
-                          &lt/deportista6gt
-                        &lt/deportistas6gt
+                        &lt?xml version="1.0" encoding="utf-8"?&gt
+                        &ltdeportistas&gt
+                          &ltdeportista&gt
+                            &ltdeporte atletismo /&gt
+                            &ltnombre&gtjesse owens&lt/nombre&gt
+                          &ltdeportista&gt
+                            &ltdeporte natación /&gt
+                            &ltnombre&gtmark spitz&lt/nombre&gt
+                          &lt/deportista&gt
+                        &lt/deportistas&gt
                 </pre>
                 <hr>
             <p>Corrección:
