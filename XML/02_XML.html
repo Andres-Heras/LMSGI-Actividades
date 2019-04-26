@@ -56,15 +56,260 @@
                 </li>
             </ul>
         </nav>
-            <!------------------------------ ARTÍCULO -------------------->
-            <article>
-                
-            </article>
-            <!---------------------------------- PIE --------------------------->
+        <!------------------------------ ARTÍCULO -------------------->
+        <article >
+            <p class="ejercicio">Ejercicio A</p>
+            <pre>&lt?xml versión="1.0"   encoding="iso-8859-1"&gt
+                        &ltagenda&gt
+                           &ltentrada&gt
+                             &ltnombre-completo&gtmarta elena zorrilla
+                           &lt/entrada&gt
+                        &lt/agenda&gt</pre>
             <hr>
-            <footer>
-                    <a href="01_XML.html">Anterior</a>
-                    <a href="03_XML.html">Siguiente</a>
-                </footer>
-        </body>
-    </html>
+            <p>Corrección:
+            </p>
+            <pre>
+        &lt?xml version="1.0" encoding="iso-8859-1"?&gt
+        &ltagenda&gt
+           &ltentrada&gt
+             &ltnombre-completo&gtmarta elena zorrilla&lt/nombre-completo&gt
+           &lt/entrada&gt
+        &lt/agenda&gt
+</pre>
+        </article>
+
+        <article>
+            <p class="ejercicio">Ejercicio B</p>
+            <pre>
+                &lt?html versión="1.0"   encoding="iso-8859-1"?&gt
+                &ltnombre-completo&gtmarta elena   zorrilla 
+                &lt/nombre-completo&gt&gt
+                  &ltdireccion&gt
+                    &ltcalle&gt avda los castros&lt/calle&gt
+                    &ltciudad&gtsantander&lt/ciudad&gt
+                    &ltcodigo-postal&gt39005&lt/codigo-postal&gt
+                    &ltregion&gtcantabria&lt/region&gt
+                    &ltpais&gtespaña&lt/pais&gt
+                  &lt/direccion&gt
+                  &lttel   preferente="true"&gt 942201363&lt/tel&gt
+                  &ltcorreo-e   href="zorrillm@unican.es"&gt&lt/correo-e&gt
+        </pre>
+            <p>Corrección:
+            </p>
+            <pre>
+        &lt?xml version="1.0" encoding="iso-8859-1"?&gt<span class="ejercicio">&lt!--error at line 1, column 47:unclosed token--&gt</span>
+&ltescritora&gt
+&ltnombre-completo&gtmarta elena   zorrilla 
+&lt/nombre-completo&gt&lt!--error at line 4, column 19:unclosed token--&gt
+  &ltdireccion&gt&lt!--error at line 5: junk after document element--&gt
+    &ltcalle&gt avda los castros&lt/calle&gt
+    &ltciudad&gtsantander&lt/ciudad&gt
+    &ltcodigo-postal&gt39005&lt/codigo-postal&gt
+    &ltregion&gtcantabria&lt/region&gt
+    &ltpais&gtespaña&lt/pais&gt
+  &lt/direccion&gt
+  &lttel preferente="true"&gt 942201363&lt/tel&gt
+  &ltcorreo-e href="zorrillm@unican.es"/&gt
+  &lt/escritora&gt
+</pre>
+        </article>
+        <hr>
+        <article>
+            <p class="ejercicio">Ejercicio C</p>
+            <pre>
+                    &lt?xml version="1.0" encoding="utf-8"?&gt
+                    &ltpelicula&gt
+                      &lttitulo&gtcon faldas y a lo loco&lt/titulo&gt
+                      &ltdirector&gtbilly wilder&lt/director&gt
+                    &lt/pelicula&gt
+                    &ltpelicula&gt
+                      &ltdirector&gtleo mccarey&lt/director&gt
+                      &lttitulo&gtsopa de ganso&lt/titulo&gt
+                    &lt/pelicula&gt
+                    &ltautor /&gtbarto&lt/autor&gt
+            </pre>
+            <hr>
+                        <p>Corrección: </p>
+                        <pre>
+                        &lt?xml version="1.0" encoding="utf-8"?6gt
+&ltfilmografía6gt
+&ltpelicula6gt
+  &lttitulo6gtcon faldas y a lo loco&lt/titulo6gt
+  &ltdirector6gtbilly wilder&lt/director6gt
+&lt/pelicula6gt
+&lt!--error at line 6, column 1: junk after document element--6gt
+&ltpelicula6gt  
+  &ltdirector6gtleo mccarey&lt/director6gt
+  &lttitulo6gtsopa de ganso&lt/titulo6gt
+&lt/pelicula6gt
+&ltautor 6gtbarto&lt/autor6gt
+&lt!--error at line 12, column 17:mismatched tag--6gt
+&lt/filmografía6gt
+                </pre>
+        </article>
+        <hr>
+        <article>
+            <p class="ejercicio">Ejercicio D</p>
+            <pre>
+                        &lt?xml version="1.0" encoding="utf-8"?6gt
+                        &ltdeportistas6gt
+                          &ltdeportista6gt
+                            &ltdeporte atletismo /6gt
+                            &ltnombre6gtjesse owens&lt/nombre6gt
+                          &ltdeportista6gt
+                            &ltdeporte natación /6gt
+                            &ltnombre6gtmark spitz&lt/nombre6gt
+                          &lt/deportista6gt
+                        &lt/deportistas6gt
+                </pre>
+                <hr>
+            <p>Corrección:
+            </p>
+            <pre>
+            &lt?xml version="1.0" encoding="UTF-8"?&gt
+            &ltdeportistas&gt
+             &ltdeportista&gt
+              &ltdeporte&gtAtletismo&lt/deporte&gt&lt!-- Error at line 4, column24:not well-formed (invalid token--&gt
+              &ltnombre&gtJesse Owens&lt/nombre&gt
+              &lt/deportista&gt
+             &ltdeportista&gt
+              &ltdeporte&gtNatación&lt/deporte&gt&lt!-- Error at line 7, column23:not well-formed (invalid token--&gt
+              &ltnombre&gtMark Spitz&lt/nombre&gt
+              &lt/deportista&gt
+            &lt/deportistas&gt&lt!--Error at line 10, column 3: mismatched tag--&gt
+                </pre>
+        </article>
+        <hr>
+        <article>
+            <p class="ejercicio">Ejercicio E</p>
+            <pre>
+                        &lt?xml version="1.0" encoding="utf-8"?&gt
+                        &lttexto&gt
+                          &lttitulo&gtxml explicado a los niños&lt/titulo&gt&lt!--error at line 3, column 38:mismatched tag--&gt
+                          &ltpárrafo&gtel &ltabreviatura&gtxml&lt/abreviatura&gtdefine cómo crear 
+                          lenguajes de marcas.&lt/párrafo&gt
+                          &ltpárrafo&gtlas marcas se añaden a un documento de texto 
+                          para añadir información.&lt/párrafo&gt
+                          &lthttp&gtwww.example.org&lt/http&gt&lt!-- error at line 8, column 10: not well-formed (invalid toke)--&gt
+                        &lt/texto&gt
+                    </pre>
+                    <hr>
+            <p>Corrección:
+            </p>
+            <pre>
+                    &lt?xml version="1.0" encoding="UTF-8"?&gt
+                    &lttexto&gt
+                      &lttitulo&gtXML explicado a los niños&lt/titulo&gt&lt!--Error at line 3, column 38:mismatched tag--&gt
+                      &ltpárrafo&gtEl &ltabreviatura&gtXML&lt/abreviatura&gtdefine cómo crear 
+                      lenguajes de marcas.&lt/párrafo&gt
+                      &ltpárrafo&gtLas marcas se añaden a un documento de texto 
+                      para añadir información.&lt/párrafo&gt
+                      &lthttp&gtwww.example.org&lt/http&gt&lt!-- Error at line 8, column 10: not well-formed (invalid toke)--&gt
+                    &lt/texto&gt
+                    </pre>
+            <hr>
+            <article>
+                <p class="ejercicio">Ejercicio F</p>
+                <pre>
+                        &lt?xml version="1.0" encoding="UTF-8"?&gt
+                        &ltgeografia mundial&gt
+                          &ltpais&gt
+                            &ltpais&gtEspaña&lt/pais&gt
+                            &ltcontinente&gtEuropa&lt/continente&gt
+                            &ltcapital&gtMadrid&lt/capital&gt
+                          &lt/pais&gt
+                        &lt/geografia mundial&gt
+                            </pre>
+                <p>Corrección:
+                </p>
+                <pre>
+                        &lt?xml version="1.0" encoding="UTF-8"?&gt
+                        &ltgeografia&gt&lt!--Erro at line 2, column 19:not well-formed (invalid toke--&gt
+                          &ltpais&gt
+                            &ltpais&gtEspaña&lt/pais&gt
+                            &ltcontinente&gtEuropa&lt/continente&gt
+                            &ltcapital&gtMadrid&lt/capital&gt
+                          &lt/pais&gt
+                        &lt/geografia&gt
+                    </pre>
+            </article>
+            <hr>
+        <article>
+            <p class="ejercicio">Ejercicio G</p>
+            <pre>
+                    &lt?xml version="1.0" encoding="UTF-8"?&gt
+                    &ltprogramas&gt
+                      &ltprograma nombre="Firefox" licencia="GPL" licencia="MPL" /&gt
+                      &ltprograma nombre="OpenOffice.org" licencia=LGPL /&gt
+                      &ltprograma nombre="Inkscape" licencia="GPL" /&gt
+                    &lt/programas&gt
+                                </pre>
+                                <hr>
+            <p>Corrección:
+            </p>
+            <pre>
+                    &lt?xml version="1.0" encoding="UTF-8"?&gt
+                    &ltprogramas&gt
+                      &ltprograma nombre="Firefox" licencia="MPL" /&gt&lt!--Error at line 3, column 45:duplicate attribute--&gt
+                      &ltprograma nombre="OpenOffice.org" licencia="LGPL "/&gt&lt!--Error at line 4, column 46: not well-formed(invalid token)--&gt
+                      &ltprograma nombre="Inkscape" licencia="GPL" /&gt
+                    &lt/programas&gt
+                        </pre>
+        </article>
+        <hr>
+    </pre>
+    <hr>
+    <article>
+        <p class="ejercicio">Ejercicio H</p>
+        <pre>
+                &lt?xml version="1.0" encoding="UTF-8"?&gt
+                &ltmundiales-de-futbol&gt
+                  &ltmundial&gt
+                    &ltpais="España" /&gt
+                    &lt1982 /&gt
+                  &lt/mundial&gt
+                &lt/mundiales-de-futbol&gt
+                                    </pre>
+        <p>Corrección:
+        </p>
+        <pre>
+                &lt?xml version="1.0" encoding="UTF-8"?&gt
+                &ltmundiales-de-futbol&gt
+                  &ltmundial&gt
+                    &ltpais&gtEspaña&lt/pais&gt&lt!--Error at line 4, column10: not well-formed (invalid token)--&gt
+                    &ltaño&gt1982&lt/año&gt&lt!--Error at line 5, column 6:not well-formed (invalid token)--&gt
+                  &lt/mundial&gt
+                &lt/mundiales-de-futbol&gt
+                            </pre>
+    </article>
+    <hr>
+</pre>
+<hr>
+<article>
+    <p class="ejercicio">Ejercicio I</p>
+    <pre>
+            &lt?xml version="1.0" encoding="UTF-8"?&gt
+&ltmediosDeTransporte&gt
+  &ltbicicleta velocidad="v&lt100km/h" /&gt
+  &ltpatinete velocidad maxima="50 km/h"
+&lt/mediosDeTransporte&gt
+                                        </pre>
+    <p>Corrección:
+    </p>
+    <pre>
+            lt?xml version="1.0" encoding="UTF-8"?&gt
+&ltmediosDeTransporte&gt
+  &ltbicicleta &gt&ltvelocidad&gt"&gt100Km/h"&lt/velocidad&gt&lt/bicicleta&gt&lt!--Error at line 3, column 26: not well-formed (invalid token)--&gt
+  &ltpatinete &gt&ltvelocidad&gt"&gt100Km/h"&lt/velocidad&gt&lt/patinete&gt&lt!--Error at line 3, column 26: not well-formed (invalid token)--&gt
+&lt/mediosDeTransporte&gt
+                                </pre>
+</article>
+<hr>
+<!---------------------------------- PIE --------------------------->
+<hr>
+<footer>
+    <a href="01_XML.html">Anterior</a>
+    <a href="03_XML.html">Siguiente</a>
+</footer>
+</body>
+</html>
